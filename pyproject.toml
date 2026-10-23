@@ -1,6 +1,6 @@
 [project]
 name = "tiny-http-link-header"
-version = "0.1.0"
+version = "0.1.1"
 description = "Parses HTTP Link headers (RFC 8288) into a list of structured Link objects with their parameters."
 requires-python = ">=3.10"
 dependencies = []
