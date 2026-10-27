@@ -35,3 +35,10 @@ could parse and drops the rest.
 - `parse_link_header(header: str) -> list[Link]` — the parser.
 - `Link` — dataclass with `target: str`, `params: dict[str, str]`, and
   `rel: str | None` (the first `rel` value for convenience).
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
